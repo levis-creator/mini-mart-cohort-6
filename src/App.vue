@@ -1,12 +1,12 @@
 <script setup>
 import { onMounted } from 'vue'
-import Topbar from './components/TopBar.vue'
+import TopBar from './components/TopBar.vue'
 
 onMounted(() => {
   setTimeout(() => window.HSStaticMethods.autoInit(), 100)
 })
 </script>
 <template>
-  <Topbar />
+  <TopBar />
   <h1>Hello</h1>
 </template>
