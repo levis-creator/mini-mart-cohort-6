@@ -3,19 +3,19 @@ import { AlignJustify, Search, ShoppingCart } from 'lucide-vue-next'
 const menuItems = [
   {
     title: 'Home',
-    link: '#',
+    link: '/',
   },
   {
     title: 'Listings',
-    link: '#',
+    link: '/listings',
   },
   {
-    title: 'Product',
-    link: '#',
+    title: 'Contact',
+    link: '/contact',
   },
   {
-    title: 'Checkout',
-    link: '#',
+    title: 'About',
+    link: '/about',
   },
 ]
 </script>
@@ -122,11 +122,11 @@ const menuItems = [
           class="flex flex-col gap-y-4 gap-x-0 mt-5 lg:flex-row lg:justify-center lg:items-center lg:gap-y-0 lg:gap-x-7 lg:mt-0"
         >
           <div v-for="(item, i) in menuItems" :key="i">
-            <a
+            <RouterLink
               class="relative inline-block text-black focus:outline-hidden before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-yellow-400 dark:text-white"
-              :href="item.link"
+              :to="item.link"
               aria-current="page"
-              >{{ item.title }}</a
+              >{{ item.title }}</RouterLink
             >
           </div>
         </div>
